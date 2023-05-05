@@ -30,6 +30,10 @@ cat <<EOF > ${HADOOP_HOME}/etc/hadoop/core-site.xml
     <name>fs.defaultFS</name>
     <value>hdfs://ranger-hadoop:9000</value>
   </property>
+  <property>
+    <name>hadoop.security.key.provider.path</name>
+    <value>kms://http@ranger-kms:9292/kms</value>
+  </property>
 </configuration>
 EOF
 

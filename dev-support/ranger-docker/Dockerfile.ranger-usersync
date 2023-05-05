@@ -41,6 +41,8 @@ RUN tar xvfz /home/ranger/dist/ranger-${RANGER_VERSION}-usersync.tar.gz --direct
     chown -R ranger:ranger ${RANGER_HOME}/usersync/ ${RANGER_SCRIPTS}/ /var/run/ranger/ /var/log/ranger/ /etc/ranger /etc/init.d/ranger-usersync && \
     chmod 744 ${RANGER_SCRIPTS}/ranger-usersync.sh
 
+RUN useradd -g hadoop -ms /bin/bash dr.who
+
 USER ranger
 
 ENTRYPOINT [ "/home/ranger/scripts/ranger-usersync.sh" ]
