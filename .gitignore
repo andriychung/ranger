@@ -18,3 +18,5 @@ winpkg/target
 **/apache_ranger.egg-info
 .python-version
 /security-admin/src/main/webapp/react-webapp/node_modules
+
+.vscode
