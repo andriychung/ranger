@@ -11,6 +11,8 @@ services:
     hostname: ranger-db.example.com
     networks:
       - ranger
+    ports:
+      - "25432:5432"
     healthcheck:
       test: 'su -c "pg_isready -q" postgres'
       interval: 10s
